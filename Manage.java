@@ -187,16 +187,13 @@ public class Manage {
                 return;
             }
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
-            String str = "";
-            String line;
-
-//            List<Nguoi> l = new ArrayList<>();
-            while ((line = bufferedReader.readLine()) != null){
-                str = str.concat(line);
-                str = str.concat("\n");
-//                String[] k = str.split(",");
-                System.out.println(str);
+            String str;
+            List<Nguoi> l = new ArrayList<>();
+            while ((str = bufferedReader.readLine()) != null){
+                String[] k = str.split(",");
+                l.add(new Nguoi(k[0],k[1],k[2],k[3],k[4],k[5],k[6]));
             }
+            list = l;
             bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();

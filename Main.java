@@ -36,10 +36,10 @@ public class Main {
                     System.out.println(" việc đọc file sẽ xóa toàn bộ danh bạ đang có trong bộ nhớ 1.đồng ý phím bất kì nấu muốn thoát ");
                     String str = sc.nextLine();
                     if (str.equals("1")) {
-                        manage.addFileCsv();
+                        manage.updateFileCsv();
                     }
                 }
-                case "7" -> manage.updateFileCsv();
+                case "7" -> manage.addFileCsv();
 
             }
         } while (!choice.equals("8"));
